@@ -29,6 +29,7 @@ form.addEventListener('submit', (event) => {
   const birth = parseDate(birthInput.value);
   const calc = parseDate(calcInput.value);
 
+  // Валидация
   if (calc < birth) {
     error.textContent = 'Дата расчёта не может быть раньше даты рождения.';
     return;
