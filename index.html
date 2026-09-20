@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор возраста</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Калькулятор возраста</h1>
+    <p class="subtitle">Расчёт возраста между двумя датами</p>
+
+    <form id="age-form" novalidate>
+      <label>
+        Дата рождения
+        <input id="birth-date" type="date" required>
+      </label>
+
+      <label>
+        Дата расчёта
+        <input id="calc-date" type="date" required>
+      </label>
+
+      <p id="error" class="error" aria-live="polite"></p>
+
+      <div class="actions">
+        <button type="submit">Рассчитать</button>
+        <button type="reset" class="secondary">Сбросить</button>
+      </div>
+    </form>
+
+    <section id="result" class="result">
+      <h2>Результат</h2>
+      <p><span>Полных лет:</span> <strong id="years">—</strong></p>
+      <p><span>Точный возраст:</span> <strong id="exact-age">—</strong></p>
+      <p><span>Следущий день рождения:</span> <strong id="next-birthday">—</strong></p>
+      <p><span>До дня рождения:</span> <strong id="days-left">—</strong></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
